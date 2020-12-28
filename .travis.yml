@@ -16,10 +16,10 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t udagram-user-api --build-arg POSTGRES_USERNAME=${POSTGRES_USERNAME} \
-  --build-arg POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
-  --build-arg POSTGRES_DB=${POSTGRES_DB} \
-  --build-arg POSTGRES_HOST=${POSTGRES_HOST} \
-  --build-arg JWT_SECRET=${JWT_SECRET} .
+    --build-arg POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
+    --build-arg POSTGRES_DB=${POSTGRES_DB} \
+    --build-arg POSTGRES_HOST=${POSTGRES_HOST} \
+    --build-arg JWT_SECRET=${JWT_SECRET} .
 
   - docker tag udagram-user-api unnismi/udagram-user-api:latest
 
